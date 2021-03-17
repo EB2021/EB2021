@@ -1,2 +1,0 @@
-Dependencies for Project 'asdasd', Target 'Target 1': (DO NOT MODIFY !)
-F (.\MyLab2.s)(0x5C89AE89)(--cpu Cortex-M4 --li -g --apcs=interwork -I "E:\대학원\수업및TA\2019 1학기\임베디드 소프트웨어\2019\2주차\Lab2\RTE"-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\Device\ARM\ARMCM4\Include-I C:\Keil_v5\ARM\CMSIS\Include--pd "__UVISION_VERSION SETA 518" --pd "ARMCM4 SETA 1"--list .\listings\mylab2.lst --xref -o .\objects\mylab2.o --depend .\objects\mylab2.d)
