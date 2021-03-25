@@ -1,0 +1,15 @@
+--cpu Cortex-M4.fp
+".\objects\lab3.o"
+".\objects\startup_stm32f429xx.o"
+".\objects\system_stm32f4xx.o"
+".\objects\stm32f4xx_hal.o"
+".\objects\stm32f4xx_hal_cortex.o"
+".\objects\stm32f4xx_hal_gpio.o"
+".\objects\stm32f4xx_hal_pwr.o"
+".\objects\stm32f4xx_hal_pwr_ex.o"
+".\objects\stm32f4xx_hal_rcc.o"
+".\objects\stm32f4xx_hal_rcc_ex.o"
+--library_type=microlib --strict --scatter ".\Objects\01_GPIO.sct"
+--summary_stderr --info summarysizes --map --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\Listings\01_GPIO.map" -o .\Objects\01_GPIO.axf
