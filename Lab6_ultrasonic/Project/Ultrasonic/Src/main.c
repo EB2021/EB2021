@@ -174,9 +174,9 @@ int main(void)
 		
 	/*============= ⑤ 그림 10. PWM Configuration 부분 ================*/
 	
-	// TIM10의 최대 클락 90Mhz (데이터시트 spec 참고) 계산식은 Reference Manual 참조
+	// TIM10의 최대 클락 90Mhz
 	// (SystemCoreClock / 131099) -1 = 1372 -> 90Mhz / 1372 = 65597Hz
-	// 초당 2회 500m/s, 1회 65535(0.5초), 2회 131070(1초), 500 / 65535 = 7.5u/s
+	
 	uwPrescalerValue = (SystemCoreClock / 2 / 131099) - 1;
 		
 	// TIM_HandleTypeDef 구조체 선언	
@@ -192,7 +192,7 @@ int main(void)
 	sConfig.OCMode     = TIM_OCMODE_PWM1;
 	sConfig.OCPolarity = TIM_OCPOLARITY_HIGH;
 	sConfig.OCFastMode = TIM_OCFAST_DISABLE;
-	sConfig.Pulse = 2;  // 7.6u/s * 2
+	sConfig.Pulse = 2;  
 	HAL_TIM_PWM_ConfigChannel(&TimHandle2, &sConfig, TIM_CHANNEL_1);
 	HAL_TIM_PWM_Start(&TimHandle2, TIM_CHANNEL_1);
 	
