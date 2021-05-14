@@ -146,14 +146,15 @@ Motor_control에서 뒤로 멈추고 뒤로 가도록 */
  /*******학번 : 202100000  , 이름 : OOO *******/
 void Detect_obstacle(){
   osDelay(200);  // 태스크 만든 후 약간의 딜레이
-	printf("\r\n Detect_obstacle");
+	
 
 	for(;;)
     {
 						osDelay(500);  //0.5 초마다 값을 읽어온다.(자유롭게 변경할 것)
 						
+						if(uwDiffCapture2/58 < 15)
 						
-						//여기에 초음파 측정 관련 코드 작성
+							//여기에 초음파 측정 관련 코드 작성
 			
     }
 }
@@ -161,13 +162,14 @@ void Detect_obstacle(){
 /*******학번 : 202100000  , 이름 : OOO *******/
 void Motor_control(){
 	osDelay(200);  // 태스크 만든 후 약간의 딜레이
-	printf("\r\n Motor_control");
+	
 	Motor_Forward();  //태스크 시작시 전진한다.
 	
    for(;;)
     {
-
-						//여기에 모터 제어 관련 코드 작성
+						if( flag == 1 )
+							//여기에 모터 제어 관련 코드 작성
+						
 					
     }
    
